@@ -1,14 +1,15 @@
 import React from 'react'
-import Header from './Components/Header.jsx'
-import Footer from './Components/Footer.jsx'
+import Home from './Components/Home'
+import Graph from './Components/graph'
+
 
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Footer />
+      {/* <Home/> */}
+      <Graph />
     </>
   )
 }
