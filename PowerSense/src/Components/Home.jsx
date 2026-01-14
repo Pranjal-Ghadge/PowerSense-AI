@@ -1,17 +1,17 @@
 import React from 'react'
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
-import Detection from './Detection.jsx'
-import Recommendation from './Recommendation.jsx'
+import Header from './Header'
+import Footer from './Footer'
+import Detection from './Detection'
+import Recommendation from './Recommendation'
 
-const Home = () => {
+const Home = ({ setView }) => {
   return (
-    <div>
-      <Header />
+    <>
+      <Header view="HOME" setView={setView} />
       <Detection />
-      <Recommendation/>
+      <Recommendation />
       <Footer />
-    </div>
+    </>
   )
 }
 
