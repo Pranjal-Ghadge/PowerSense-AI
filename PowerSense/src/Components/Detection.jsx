@@ -11,8 +11,8 @@ const Detection = () => {
   const type = classifyAnomaly(deviation)
 
   return (
-    <div className='border-2 border-gray-200 rounded-lg m-10 p-5'>
-      <h1 className='font-semibold text-2xl '>Anomaly Detection</h1>
+    <div className='bg-white border border-gray-200 rounded-2xl shadow-sm p-5 h-full max-h-[360px] overflow-y-auto'>
+      <h1 className='font-semibold text-2xl text-gray-800 mb-4'>Anomaly Detection</h1>
 
       {type === "HIGH" && <High data={latest} deviation={deviation} />}
       {type === "MEDIUM" && <Medium data={latest} deviation={deviation} />}

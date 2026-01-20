@@ -2,16 +2,26 @@ import React from 'react'
 
 const Recomm = () => {
   return (
-    <div className='m-5  rounded-lg p-4 bg-gray-100 border-2 border-gray-300 border-l-4 border-l-blue-500'>
-            <div className='flex h-10'>
-            <img src="https://toppng.com/uploads/preview/lightbulb-icon-transparent-background-11550235702ap4xmtuo0g.png" alt="icon" className='h-7 w-7'/>
-            <h1 className='mt-1 px-2'>Title</h1>
-            
-            </div>
-            <div className='flex justify-between px-7 mr-30'>
-            <h1>Description</h1>
-            </div> 
+    <div className='rounded-2xl p-4 bg-white border border-gray-200 shadow-sm'>
+      <div className='flex gap-3 items-start border-l-4 border-l-green-400 pl-4'>
+        <div className='w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-blue-600 text-xl shadow-sm'>
+          ⚡
         </div>
+        <div className='flex-1'>
+          <div className='flex justify-between items-center flex-wrap gap-2'>
+            <h2 className='text-lg font-semibold text-gray-800 leading-tight'>
+              High consumption spike detected at 6:00 PM
+            </h2>
+            <span className='text-xs text-gray-700 border border-gray-200 rounded-full px-3 py-1 bg-gray-50'>
+              High Impact
+            </span>
+          </div>
+          <p className='text-gray-700 text-sm mt-2 leading-relaxed'>
+            Consider investigating HVAC systems or production equipment during peak hours.
+          </p>
+        </div>
+      </div>
+    </div>
   )
 }
 

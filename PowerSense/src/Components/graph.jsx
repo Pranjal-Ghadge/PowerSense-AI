@@ -4,10 +4,10 @@ import Footer from './Footer'
 import AvsP from '../Elements/AvsP'
 import OtherInfo from '../Elements/OtherInfo'
 
-const Graph = ({ setView }) => {
+const Graph = ({ setView, onLogout }) => {
   return (
     <>
-      <Header view="GRAPH" setView={setView} />
+      <Header onLogout={onLogout} />
       <AvsP />
       <OtherInfo />
       <Footer />

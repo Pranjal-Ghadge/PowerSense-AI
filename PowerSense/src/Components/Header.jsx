@@ -1,35 +1,45 @@
 import React from 'react'
-import logo from '../assets/logo.png'
 
-const Header = ({ view, setView }) => {
+const LightningIcon = ({ size = 48 }) => (
+  <div
+    className="rounded-2xl shadow flex items-center justify-center bg-blue-600"
+    style={{ width: size, height: size }}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="w-6 h-6"
+    >
+      <path
+        d="M13.5 2.5 6.75 13h4.25l-.5 8.5 6.75-10.5h-4.25z"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </div>
+)
+
+const Header = ({ onLogout }) => {
   return (
-    <div className='flex justify-between items-center bg-white border-b-2 border-gray-200'>
-      <div className='flex justify-center gap-10 p-5 '>
-        <img src={logo} alt="PowerSense Logo" className="w-15 h-15 object-contain rounded-lg shadow-md"/>
+    <header className='flex justify-between items-center bg-white border-b border-gray-200 px-6 py-4 shadow-sm'>
+      <div className='flex items-center gap-4'>
+        <LightningIcon />
         <div>
-          <h2 className='font-semibold text-2xl'>PowerSense</h2>
-          <h4 className='text-gray-500'>Power Consumption Anomaly Prediction</h4>
+          <h2 className='font-semibold text-2xl text-gray-800'>PowerSense</h2>
+          <h4 className='text-gray-500 text-sm'>Power Consumption Anomaly Prediction</h4>
         </div>
       </div>
 
-      <div className='flex justify-center gap-10 mr-30 '>
-        <button
-          onClick={() => setView("HOME")}
-          className={`text-xl font-semibold px-4 py-2 rounded-lg 
-          ${view === "HOME" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-blue-600 hover:text-white"}`}
-        >
-          Home
-        </button>
-
-        <button
-          onClick={() => setView("GRAPH")}
-          className={`text-xl font-semibold px-4 py-2 rounded-lg 
-          ${view === "GRAPH" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-blue-600 hover:text-white"}`}
-        >
-          Graph
-        </button>
-      </div>
-    </div>
+      <button
+        onClick={onLogout}
+        className='flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow'
+      >
+        <span>Logout</span>
+      </button>
+    </header>
   )
 }
 

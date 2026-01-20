@@ -11,26 +11,33 @@ const AnomalyCard = ({
   deviation
 }) => {
   return (
-    <div className={`m-5 border-2 ${borderColor} rounded-lg p-4 ${bgColor}`}>
-      <div className='flex justify-between mb-4 '>
-        <h1 className={textColor}>{label}</h1>
-        <button className={`mr-10 ${buttonBg} ${textColor} px-4 rounded-lg font-semibold`}>
-          {severity}
-        </button>
-      </div>
+    <div className='bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden'>
+      <div className={`px-4 py-4 ${bgColor} ${borderColor}`}>
+        <div className='flex items-center gap-2 text-orange-600 mb-3'>
+          <span className='text-lg'>⚠</span>
+          <span className='text-sm text-gray-700'>{label}</span>
+          <span className='text-xs text-gray-500'>- 12:00 PM</span>
+        </div>
 
-      <div className='flex justify-between px-10 mr-30'>
-        <div>
-          <h1 className={textColor}>Actual</h1>
-          <h2 className={`font-semibold ${textColor}`}>{data.actual} kWh</h2>
+        <div className='flex items-center justify-between'>
+          <div>
+            <p className='text-gray-600 text-xs'>Actual</p>
+            <p className='text-lg font-semibold text-gray-800'>{data.actual} kWh</p>
+          </div>
+          <div>
+            <p className='text-gray-600 text-xs'>Predicted</p>
+            <p className='text-lg font-semibold text-gray-800'>{data.predicted} kWh</p>
+          </div>
+          <div className='text-right'>
+            <p className='text-gray-600 text-xs'>Deviation</p>
+            <p className='text-lg font-semibold text-gray-800'>{deviation} %</p>
+          </div>
         </div>
-        <div>
-          <h1 className={textColor}>Predicted</h1>
-          <h2 className={`font-semibold ${textColor}`}>{data.predicted} kWh</h2>
-        </div>
-        <div>
-          <h1 className={textColor}>Deviation</h1>
-          <h2 className={`font-semibold ${textColor}`}>{deviation} %</h2>
+
+        <div className='flex justify-end mt-3'>
+          <span className={`${buttonBg} ${textColor} px-4 py-1 rounded-full text-sm font-semibold`}>
+            {severity}
+          </span>
         </div>
       </div>
     </div>
