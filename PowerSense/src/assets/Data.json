@@ -1,0 +1,62 @@
+[
+  {
+    "label": "00:00",
+    "actual": 420,
+    "predicted": 400
+  },
+  {
+    "label": "02:00",
+    "actual": 450,
+    "predicted": 430
+  },
+  {
+    "label": "04:00",
+    "actual": 480,
+    "predicted": 470
+  },
+  {
+    "label": "06:00",
+    "actual": 520,
+    "predicted": 500
+  },
+  {
+    "label": "08:00",
+    "actual": 610,
+    "predicted": 580
+  },
+  {
+    "label": "10:00",
+    "actual": 680,
+    "predicted": 650
+  },
+  {
+    "label": "12:00",
+    "actual": 720,
+    "predicted": 700
+  },
+  {
+    "label": "14:00",
+    "actual": 690,
+    "predicted": 670
+  },
+  {
+    "label": "16:00",
+    "actual": 640,
+    "predicted": 620
+  },
+  {
+    "label": "18:00",
+    "actual": 700,
+    "predicted": 680
+  },
+  {
+    "label": "20:00",
+    "actual": 750,
+    "predicted": 730
+  },
+  {
+    "label": "22:00",
+    "actual": 680,
+    "predicted": 660
+  }
+]
